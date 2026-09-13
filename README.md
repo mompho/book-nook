@@ -1,46 +1,85 @@
-# Book Nook - a cute Pomodoro timer
+# 📖 Book Nook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A cute, cozy Pomodoro timer for people who'd rather be reading. Built with **React** and **Electron**, Book Nook sits on your desktop as a little companion that flips through its pages while you focus, and curls up sleeping when it's time for a break.
 
-## Available Scripts
+![status](https://img.shields.io/badge/status-in%20development-orange)
+![made with](https://img.shields.io/badge/made%20with-React%20%2B%20Electron-purple)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Pomodoro-style focus timer** — work in focused sprints with built-in break intervals
+- 📚 **Animated book companion** — a pixel-art book that comes alive as you work
+- **Native desktop app** — runs as a standalone window via Electron, not just a browser tab
+- **Cozy, minimal UI** — designed to feel like a little reading nook, not a productivity dashboard
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://react.dev/) — UI and timer logic
+- [Electron](https://www.electronjs.org/) — desktop app shell and native window controls
+- TypeScript (typed `window.electronAPI` bridge between renderer and main process)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> ```bash
+> npm uninstall electron
+> npm install electron@30 --save-dev
+> rm -rf node_modules package-lock.json
+> npm install
+> ```
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone <book-nook>
+cd book-nook
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running in development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Start the React dev server:
+```bash
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In a separate terminal, launch Electron:
+```bash
+npm run electron
+```
 
-## Learn More
+### Building for production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This creates an optimised production build of the React app in `build/`, ready to be packaged into a distributable Electron app.
+
+---
+
+## 🗂️ Project Structure
+
+```
+book-nook/
+├── public/
+│   └── electron.js       # Electron main process entry point
+├── src/
+│   ├── App.tsx            # Main timer UI and logic
+│   ├── electron.d.ts      # TypeScript declarations for window.electronAPI
+│   └── ...
+├── package.json
+└── README.md
+```
+
+---
+
+Made with 🤎 for cozy, focused reading sessions. [React documentation](https://reactjs.org/).
