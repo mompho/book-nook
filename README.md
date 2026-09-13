@@ -1,4 +1,4 @@
-# 📖 Book Nook
+# Book Nook - a cute Pomodoro timer
 
 A cute, cozy Pomodoro timer for people who'd rather be reading. Built with **React** and **Electron**, Book Nook sits on your desktop as a little companion that flips through its pages while you focus, and curls up sleeping when it's time for a break.
 
@@ -39,7 +39,7 @@ A cute, cozy Pomodoro timer for people who'd rather be reading. Built with **Rea
 ### Installation
 
 ```bash
-git clone <book-nook>
+git clone <https://github.com/mompho/book-nook>
 cd book-nook
 npm install
 ```
