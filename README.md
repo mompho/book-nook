@@ -10,7 +10,7 @@ A cute, cozy Pomodoro timer for people who'd rather be reading. Built with **Rea
 ## ✨ Features
 
 - **Pomodoro-style focus timer** — work in focused sprints with built-in break intervals
-- 📚 **Animated book companion** — a pixel-art book that comes alive as you work
+- **Animated book companion** — a pixel-art book that comes alive as you work
 - **Native desktop app** — runs as a standalone window via Electron, not just a browser tab
 - **Cozy, minimal UI** — designed to feel like a little reading nook, not a productivity dashboard
 
